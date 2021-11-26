@@ -6,13 +6,17 @@
     <title>Usuarios</title>
 </head>
 <body>
-    <h1><%= "Listado de usuarios" %><%!
+    <h1 align = "center"><%= "Listado de usuarios" %><%!
     %></h1><br/>
     <%-- Creamos la tabla que se visualizara en la pagiba web y tambien usaremos colores para poder
     pintar las cabeceras de la tabala--%>
-        <table border="1" width="600">
+        <table border="1" width="600" align="center">
             <tr bgcolor="aqua">
-                <th>Código</th><th>Nombre</th><th>Edad</th><th>Sexo</th><th>Password</th>
+                <th COLSPAN="5">Mantenimiento de Usuarios</th>
+                <th img src = "Iconos/icons8-añadir-usuario-masculino-16.png" width="20" height="20"></th>
+            </tr>
+            <tr bgcolor="aqua">
+                <th>Código</th><th>Nombre</th><th>Edad</th><th>Sexo</th><th>Password</th><th>Acción</th>
             </tr>
             <%
                 Connection cnx = null;
@@ -39,6 +43,10 @@
                                 <th><%= rs.getString(3) %></th>
                                 <th><%= rs.getString(4) %></th>
                                 <th><%= rs.getString(5) %></th>
+                                <th>
+                                    <img src = "Iconos/icons8-editar-usuario-masculino-48.png" width="20" height="20"> ||
+                                    <img src = "Iconos/icons8-eliminar-usuraria-16.png" width="20" height="20">
+                                </th>
                             </tr>
                         <%
                     }
