@@ -23,7 +23,7 @@
                 try{
                     Class.forName("com.mysql.jdbc.Driver");
                     cnx = DriverManager.getConnection
-                            ("jdbc:mysql://localhost/cursoJSP?user=root&password=");
+                            ("jdbc:mysql://localhost/cursoJSP?user=root&password=anne*Sistemas21");
 
                     //Para poder ejecutar la consulta
                     sta = cnx.createStatement();

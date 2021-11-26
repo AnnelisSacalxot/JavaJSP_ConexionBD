@@ -23,7 +23,7 @@
                 try{
                     Class.forName("com.mysql.jdbc.Driver");
                     cnx = DriverManager.getConnection
-                            ("jdbc:mysql://localhost/cursoJSP?user=root&password=");
+                            ("jdbc:mysql://localhost/cursoJSP?user=root&password=anne*Sistemas21");
 
                     //Para poder ejecutar la consulta
                     sta = cnx.createStatement();
@@ -35,10 +35,10 @@
                         %>
                             <tr>
                                 <th><%= rs.getString(1) %></th>
-                                <th><% rs.getString(2); %></th>
-                                <th><% rs.getString(3); %></th>
-                                <th><% rs.getString(4); %></th>
-                                <th><% rs.getString(5); %></th>
+                                <th><%= rs.getString(2) %></th>
+                                <th><%= rs.getString(3) %></th>
+                                <th><%= rs.getString(4) %></th>
+                                <th><%= rs.getString(5) %></th>
                             </tr>
                         <%
                     }
