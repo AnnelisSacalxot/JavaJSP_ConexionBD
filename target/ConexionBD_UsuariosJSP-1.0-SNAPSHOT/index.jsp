@@ -13,7 +13,8 @@
         <table border="1" width="600" align="center">
             <tr bgcolor="aqua">
                 <th COLSPAN="5">Mantenimiento de Usuarios</th>
-                <th img src = "Iconos/icons8-añadir-usuario-masculino-16.png" width="20" height="20"></th>
+                <th><a href="nuevo.jsp">
+                <a img src = "Iconos/icons8-añadir-usuario-masculino-16.png" width="16" height="16"></a></th>
             </tr>
             <tr bgcolor="aqua">
                 <th>Código</th><th>Nombre</th><th>Edad</th><th>Sexo</th><th>Password</th><th>Acción</th>
@@ -45,7 +46,7 @@
                                 <th><%= rs.getString(5) %></th>
                                 <th>
                                     <img src = "Iconos/icons8-editar-usuario-masculino-48.png" width="20" height="20"> ||
-                                    <img src = "Iconos/icons8-eliminar-usuraria-16.png" width="20" height="20">
+                                    <img src = "Iconos/eliminar-usuaria-16.png" width="16" height="16">
                                 </th>
                             </tr>
                         <%
