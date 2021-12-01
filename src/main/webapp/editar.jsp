@@ -70,6 +70,22 @@
             }
     } catch (Exception e) {
             }
+        //Accion del boton para editar los datos del usuario y que se guarden esos cambios (mostrarlo
+            // en base de datos)
+        if (request.getParameter("btnGrabar")!= null){
+
+            String codu = request.getParameter("txtCod");
+            String nomu = request.getParameter("txtNom");
+            int edad = Integer.parseInt(request.getParameter("txtEdad"));
+            String sexo = request.getParameter("txtSexo");
+            String pass = request.getParameter("txtPas");
+
+            //Para recibir los nuevos parametros y ya modificarlo en la base de datos
+
+            sta.executeUpdate
+                    ("update usuarios set NomUsu= '"+nomu+"', EdadUsu = "+edad+", SexoUsu = '"+sexo+"', " +
+                            "PassUsu = '"+pass+"' where CodUsu= '"+codu+"'");
+        }
         %>
     </body>
 </html>
