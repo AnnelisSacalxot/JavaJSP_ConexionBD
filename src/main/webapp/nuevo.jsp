@@ -8,11 +8,13 @@
   Time: 11:59
   To change this template use File | Settings | File Templates.
 --%>
+<%-- Esta página nos va a servir para poder añadir nuevos usuarios al listado de usuarios que ya
+     se tenia--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <title>Registro</title>
-</head>
+    <head>
+        <title>Registro</title>
+    </head>
     <h2 align="center">Registro de Usuarios</h2>
     <form action="">
         <table border="1" align="center" width="250">
@@ -64,6 +66,10 @@
                     sta = cnx.createStatement();
                     sta.executeUpdate("insert into usuarios values ('" + cod + "','" + nom + "'," + edad + ",'" + sex + "','" + pass + "')");
                     request.getRequestDispatcher("index.jsp").forward(request, response);
+
+                    cnx.close();
+                    rs.close();
+                    sta.close();
 
                 } catch (Exception e) {
                     System.out.println("Error al registrar el driver de MySQL: " + e);
