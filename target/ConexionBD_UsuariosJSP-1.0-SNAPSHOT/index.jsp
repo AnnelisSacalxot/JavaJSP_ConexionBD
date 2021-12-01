@@ -59,6 +59,6 @@
      System.out.println("Error al registrar el driver de MySQL: " + e);
  }
 %>
-</table>
+            </table>
 </body>
 </html>
