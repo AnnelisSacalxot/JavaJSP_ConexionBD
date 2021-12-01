@@ -45,7 +45,9 @@
                  <th><%= rs.getString(4) %></th>
                  <th><%= rs.getString(5) %></th>
                  <th>
-                     <img src = "Iconos/icons8-editar-usuario-masculino-48.png" width="20" height="20"> ||
+                     <a href="editar.jsp?cod=<%= rs.getString(1) %>">
+                     <img src = "Iconos/icons8-editar-usuario-masculino-48.png" width="20" height="20">||
+                     </a>
                      <a href="eliminar.jsp?cod=<%= rs.getString(1) %>">
                      <img src = "Iconos/eliminar-usuaria-16.png" width="16" height="16">
                      </a>
