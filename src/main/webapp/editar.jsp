@@ -85,6 +85,8 @@
             sta.executeUpdate
                     ("update usuarios set NomUsu= '"+nomu+"', EdadUsu = "+edad+", SexoUsu = '"+sexo+"', " +
                             "PassUsu = '"+pass+"' where CodUsu= '"+codu+"'");
+
+            request.getRequestDispatcher("index.jsp").forward(request, response);
         }
         %>
     </body>
